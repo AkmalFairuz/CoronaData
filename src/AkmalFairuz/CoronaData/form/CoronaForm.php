@@ -77,7 +77,7 @@ class CoronaForm
         foreach($data as $cdata) {
             if(strtolower($cdata["attributes"]["Country_Region"]) == strtolower($countryName)) {
                 $content = $cdata["attributes"];
-                $content = TextFormat::GRAY . $content["Country_Region"].":".TextFormat::YELLOW."\n Confirmed: ".number_format($content["Confirmed"]) . "\n"." Deaths: ".number_format($content["Deaths"])."\n Recovered".number_format($content["Recovered"])."\n\n";
+                $content = TextFormat::GRAY . $content["Country_Region"].":".TextFormat::YELLOW."\n Confirmed: ".number_format($content["Confirmed"]) . "\n"." Deaths: ".number_format($content["Deaths"])."\n Recovered: ".number_format($content["Recovered"])."\n\n";
             }
         }
         $form->setContent($content);
